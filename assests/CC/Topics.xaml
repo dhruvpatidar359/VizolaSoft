@@ -7,11 +7,16 @@
              mc:Ignorable="d"
              x:Name="Topicss"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Border
+    <Button
         Background="{StaticResource CanvasBrush}"
-        CornerRadius="5"
+        Style="{StaticResource TransparentStyle}"
+        Name="Border"
         Height="310"
-        Width="195">
+        BitmapEffect="{StaticResource BottomShadowEffect}"
+        Width="195" MouseLeftButtonDown="mouse_leftDown">
+        
+        
+        
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition
@@ -59,5 +64,5 @@
             </StackPanel>
         </Grid>
         
-    </Border>
+    </Button>
 </UserControl>

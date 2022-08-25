@@ -82,6 +82,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="assests\Dock Style.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="assests\icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -157,6 +161,22 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assests\leapmotion.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assests\ultrahands.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="assests\1.png" />
+    <Resource Include="assests\2.png" />
+    <Resource Include="assests\3.png" />
+    <Resource Include="assests\4.png" />
+    <Resource Include="assests\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assests\vizolaicon.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

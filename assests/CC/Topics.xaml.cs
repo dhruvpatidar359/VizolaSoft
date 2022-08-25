@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -74,8 +75,13 @@ namespace VizolaSoft.assests.CC
         public static readonly DependencyProperty PriceProperty =
             DependencyProperty.Register("Price", typeof(string), typeof(Topics));
 
+        private void mouse_leftDown(object sender, MouseButtonEventArgs e)
+        {
+             var processInfo = new ProcessStartInfo("C:\\Users\\dhruv\\Desktop\\interactive.exe");
+             Process.Start(processInfo);
 
+        }
 
-
+      
     }
 }

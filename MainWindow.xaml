@@ -151,7 +151,7 @@
 
                 </StackPanel>
 
-                <Grid
+                <!--<Grid
                     Background="{StaticResource DimBrush}"
                     HorizontalAlignment="Stretch"
                     Height="40"
@@ -176,11 +176,27 @@
                     Foreground="{StaticResource SecondaryBrush}"
                     Text="Search the VizoGround"
                     VerticalAlignment="Center" Grid.ColumnSpan="2"/>
-                </Grid>
+                    
 
+                   
+                    
 
-
-
+                </Grid>-->
+                <TextBox
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    Margin="0,0,200,0"
+                    Background="Transparent"
+                    BorderThickness="0"
+                    FontSize="40"
+                    Name="VIZOLA"
+                    Foreground="{StaticResource SecondaryBrush}"
+                    Text="VIZOLA"
+                    VerticalAlignment="Center" Grid.ColumnSpan="2"
+                    MouseEnter="TextBox_MouseEnter"
+                    MouseLeave="TextBox_MouseLeave"/>
+           
+            
 
 
 
@@ -196,7 +212,8 @@
             Grid.Row="1"
             >
 
-            <ListBox
+            <!--<ListBox
+                
                 Background="Transparent"
                 BorderThickness="0">
                 <ListBox.Resources>
@@ -234,6 +251,7 @@
                         </Setter>
 
                     </Style>
+                  
                 </ListBox.Resources>
                 <ListBoxItem
                     Content="{StaticResource home_icon}"
@@ -256,7 +274,301 @@
                     />
 
 
-            </ListBox>
+
+
+            </ListBox>-->
+            <StackPanel>
+            <Button 
+                Margin="0,10,0,10"
+                    
+                                x:Name="home"
+                                Style="{StaticResource DockBtnStyle}">
+
+                <Button.Background>
+
+                    <ImageBrush ImageSource="Assests/1.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+                <Popup Width="70"
+                                   HorizontalOffset="-12"
+                                   PlacementTarget="{Binding ElementName=home}"
+                                   IsOpen="{Binding ElementName=home, Path=IsMouseOver, Mode=OneWay}"
+                                   Style="{StaticResource PopupStyle}">
+
+                    <Grid>
+
+                        <Border Style="{StaticResource border}">
+
+                            <TextBlock Text="Home"
+                                                   Style="{StaticResource PopupText}" />
+
+                        </Border>
+
+                        <Path Style="{StaticResource ArrowPath}" />
+
+                    </Grid>
+
+                </Popup>
+
+            </Button>
+
+                <Button  Margin="0,10,0,10"
+                                x:Name="set"
+                                Style="{StaticResource DockBtnStyle}">
+
+                <Button.Background>
+
+                    <ImageBrush ImageSource="Assests/2.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+                <Popup Width="70"
+                                   HorizontalOffset="-12"
+                                   PlacementTarget="{Binding ElementName=home}"
+                                   IsOpen="{Binding ElementName=home, Path=IsMouseOver, Mode=OneWay}"
+                                   Style="{StaticResource PopupStyle}">
+
+                    <Grid>
+
+                        <Border Style="{StaticResource border}">
+
+                            <TextBlock Text="Home"
+                                                   Style="{StaticResource PopupText}" />
+
+                        </Border>
+
+                        <Path Style="{StaticResource ArrowPath}" />
+
+                    </Grid>
+
+                </Popup>
+
+            </Button>
+
+            <!--// Settings //-->
+
+                <Button  Margin="0,10,0,10"
+                                x:Name="setting"
+                                Style="{StaticResource DockBtnStyle}">
+
+                <Button.Background>
+
+                    <ImageBrush ImageSource="Assests/3.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+                <Popup Width="85"
+                                   HorizontalOffset="-20"
+                                   PlacementTarget="{Binding ElementName=setting}"
+                                   IsOpen="{Binding ElementName=setting, Path=IsMouseOver, Mode=OneWay}"
+                                   Style="{StaticResource PopupStyle}">
+
+                    <Grid>
+
+                        <Border Style="{StaticResource border}">
+
+                            <TextBlock Text="Settings"
+                                                   Style="{StaticResource PopupText}" />
+
+                        </Border>
+
+                        <Path Style="{StaticResource ArrowPath}" />
+
+                    </Grid>
+
+                </Popup>
+
+            </Button>
+
+            <!--// Mail //-->
+
+                <Button  Margin="0,10,0,10"
+                                x:Name="mail"
+                                Style="{StaticResource DockBtnStyle}">
+
+                <Button.Background>
+
+                    <ImageBrush ImageSource="Assests/4.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+                <Popup Width="60"
+                                   HorizontalOffset="-6"
+                                   PlacementTarget="{Binding ElementName=mail}"
+                                   IsOpen="{Binding ElementName=mail, Path=IsMouseOver, Mode=OneWay}"
+                                   Style="{StaticResource PopupStyle}">
+
+                    <Grid>
+
+                        <Border Style="{StaticResource border}">
+
+                            <TextBlock Text="Mail"
+                                                   Style="{StaticResource PopupText}" />
+
+                        </Border>
+
+                        <Path Style="{StaticResource ArrowPath}" />
+
+                    </Grid>
+
+                </Popup>
+
+            </Button>
+
+            <!--// Visual Studio //-->
+
+                <Button  Margin="0,10,0,10"
+                                x:Name="vs"
+                                Style="{StaticResource DockBtnStyle}">
+
+                <Button.Background>
+
+                    <ImageBrush ImageSource="Assests/5.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+                <Popup Width="118"
+                                   HorizontalOffset="-35"
+                                   PlacementTarget="{Binding ElementName=vs}"
+                                   IsOpen="{Binding ElementName=vs, Path=IsMouseOver, Mode=OneWay}"
+                                   Style="{StaticResource PopupStyle}">
+
+                    <Grid>
+
+                        <Border Style="{StaticResource border}">
+
+                            <TextBlock Text="Visual Studio"
+                                                   Style="{StaticResource PopupText}" />
+
+                        </Border>
+
+                        <Path Style="{StaticResource ArrowPath}" />
+
+                    </Grid>
+
+                </Popup>
+
+            </Button>
+
+            <!--// Chrome //-->
+
+                <Button  Margin="0,10,0,10"
+                                x:Name="chrome"
+                                Style="{StaticResource DockBtnStyle}">
+
+                <Button.Background>
+
+                    <ImageBrush ImageSource="Assests/1.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+                <Popup Width="85"
+                                   HorizontalOffset="-19"
+                                   PlacementTarget="{Binding ElementName=chrome}"
+                                   IsOpen="{Binding ElementName=chrome, Path=IsMouseOver, Mode=OneWay}"
+                                   Style="{StaticResource PopupStyle}">
+
+                    <Grid>
+
+                        <Border Style="{StaticResource border}">
+
+                            <TextBlock Text="Chrome"
+                                                   Style="{StaticResource PopupText}" />
+
+                        </Border>
+
+                        <Path Style="{StaticResource ArrowPath}" />
+
+                    </Grid>
+
+                </Popup>
+
+            </Button>
+
+            <!--// YouTube //-->
+
+                <Button Margin="0,10,0,10"
+                                x:Name="youtube"
+                                Style="{StaticResource DockBtnStyle}">
+
+                <Button.Background>
+
+                    <ImageBrush ImageSource="Assests/1.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+                <Popup Width="85"
+                                   HorizontalOffset="-18"
+                                   PlacementTarget="{Binding ElementName=youtube}"
+                                   IsOpen="{Binding ElementName=youtube, Path=IsMouseOver, Mode=OneWay}"
+                                   Style="{StaticResource PopupStyle}">
+
+                    <Grid>
+
+                        <Border Style="{StaticResource border}">
+
+                            <TextBlock Text="YouTube"
+                                                   Style="{StaticResource PopupText}" />
+
+                        </Border>
+
+                        <Path Style="{StaticResource ArrowPath}" />
+
+                    </Grid>
+
+                </Popup>
+
+            </Button>
+
+            <!--// Word //-->
+
+                <Button  Margin="0,10,0,10"
+                                x:Name="word"
+                                Style="{StaticResource DockBtnStyle}">
+
+                <Button.Background>
+
+                    <ImageBrush ImageSource="Assests/1.png"
+                                            Stretch="Uniform" />
+
+                </Button.Background>
+
+                <Popup Width="60"
+                                   HorizontalOffset="-8"
+                                   PlacementTarget="{Binding ElementName=word}"
+                                   IsOpen="{Binding ElementName=word, Path=IsMouseOver, Mode=OneWay}"
+                                   Style="{StaticResource PopupStyle}">
+
+                    <Grid>
+
+                        <Border Style="{StaticResource border}">
+
+                            <TextBlock Text="Word"
+                                                   Style="{StaticResource PopupText}" />
+
+                        </Border>
+
+                        <Path Style="{StaticResource ArrowPath}" />
+
+                    </Grid>
+
+                </Popup>
+
+            </Button>
+
+            <!--// Photoshop //-->
+
+          
+            <!--// Downloads //-->
+            </StackPanel>
 
         </Grid>
         <ScrollViewer Grid.Row="1"
@@ -266,11 +578,11 @@
                       >
             <StackPanel
                 Margin="40">
-                <Grid
+                <!--<Grid
                     Background="{StaticResource CanvasBrush}"
                     Height="77"
                     >
-                    <StackPanel
+                    --><!--<StackPanel
                         Orientation="Horizontal"
                         HorizontalAlignment="Left">
 
@@ -293,9 +605,9 @@
 
 
 
-                    </StackPanel>
+                    </StackPanel>-->
 
-                    <UniformGrid
+                    <!--<UniformGrid
                         
                         Columns="2"
                         Margin="0,0,6,0"
@@ -344,39 +656,40 @@
                                 </Setter>
                             </Style>
                         </UniformGrid.Resources>
-                    </UniformGrid>
+                    </UniformGrid>--><!--
 
-                </Grid>
+                </Grid>-->
 
                 <Grid Margin="0,20,0,0">
                     <TextBlock
-                        Text="Hot &amp; New"
-                        Foreground="{StaticResource SecondaryBrush}"
+                        Text="Continue"
+                        Foreground="{StaticResource OtherText}"
                         FontWeight="SemiBold"
                         FontSize="22"
                         VerticalAlignment="Bottom"/>
 
-                    <TextBlock
+                    <!--<TextBlock
                         Foreground="{StaticResource SecondaryBrush}"
                         FontWeight="SemiBold"
                         FontSize="22"
                         Text="SEE MORE"
                         HorizontalAlignment="Right"
-                        VerticalAlignment="Center"/>
+                        VerticalAlignment="Center"/>-->
                 </Grid>
 
                 <StackPanel
                     Orientation="Horizontal"
                     Margin="0,10,0,0">
 
+                    
                     <Grid
                         Background="{StaticResource PrimaryBrush}"
                         Height="275"
-                        Width="550"
+                        Width="560"
                        Margin="0,0,15,0">
                         <Image
                               BitmapEffect="{StaticResource BottomShadowEffect}"
-                            Source="/assests/gg.png"
+                            Source="/assests/leapmotion.jpg"
                             Stretch="UniformToFill"/>
 
                         <Grid
@@ -409,11 +722,11 @@
                                 </StackPanel>
                             </DockPanel>
                         </Grid>
-                        <StackPanel
+                        <!--<StackPanel
                             Orientation="Horizontal"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
-                            Margin="39,105,0,0"
+                            Margin="39,230,0,0"
                             >
                             <cc:tags
                                 Margin="0,0,5,0"
@@ -424,31 +737,31 @@
                             <cc:tags
                                 Margin="0,0,5,0"
                                 Text="ACTION"/>
-
-
-
-
-
-                        </StackPanel>
-                        <TextBlock
-                                HorizontalAlignment="Left"
-                                Margin="30,146,0,0"
+                        </StackPanel>-->
+                        <!--<TextBlock
+                                HorizontalAlignment="Center"
                                 TextWrapping="Wrap"
-                                Text="Come and Explore with us"
-                                VerticalAlignment="Top"
+                                Text="START YOUR FIRST LESSON"
+                                VerticalAlignment="Bottom"
                                 FontSize="40"
                                 FontWeight="Bold"
-                                Foreground="{StaticResource SecondaryBrush}"/>
+                                Foreground="{StaticResource SecondaryBrush}"/>-->
+                        <cc:tags
+                            Text="START YOUR FIRST LESSON"
+                            VerticalAlignment="Bottom"
+                            FontSize="30"
+                       
+                            FontWeight="SemiBold"/>
 
                     </Grid>
                     <Grid
                         Background="{StaticResource PrimaryBrush}"
                         Height="275"
-                        Width="550"
+                        Width="560"
                         Margin="0,0,15,0">
                         <Image
                               BitmapEffect="{StaticResource BottomShadowEffect}"
-                            Source="/assests/gg.png"
+                            Source="/assests/ultrahands.jpg"
                             Stretch="UniformToFill"/>
 
                         <Grid
@@ -472,7 +785,7 @@
                                         Width="35"></Path>
 
                                     <TextBlock
-                                        Text="93%"
+                                        Text="95%"
                                         Margin="0,0,8,0"
                                         Foreground="{StaticResource SecondaryBrush}"
                                         FontWeight="SemiBold"
@@ -481,7 +794,7 @@
                                 </StackPanel>
                             </DockPanel>
                         </Grid>
-                        <StackPanel
+                        <!--<StackPanel
                             Orientation="Horizontal"
                             HorizontalAlignment="Left"
                             VerticalAlignment="Top"
@@ -502,31 +815,39 @@
 
 
 
-                        </StackPanel>
-                        <TextBlock
-                                HorizontalAlignment="Left"
-                                Margin="30,146,0,0"
+                        </StackPanel>-->
+                        <!--<TextBlock
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Bottom"
                                 TextWrapping="Wrap"
-                                Text="Come and Explore with us"
-                                VerticalAlignment="Top"
+                                Text="PLAY WITH IMAGINATION"
                                 FontSize="40"
                                 FontWeight="Bold"
-                                Foreground="{StaticResource SecondaryBrush}"/>
+                                Foreground="White"/>-->
+                        <cc:tags
+                            Text="CONTINUE"
+                           
+                            VerticalAlignment="Bottom"
+                            FontSize="30"
+                           FontWeight="SemiBold"
+                           />
 
                     </Grid>
-
+                   
 
                 </StackPanel>
+                
                 <Grid Margin="0,20,0,0">
                     <TextBlock
                         Text="First Year"
-                        Foreground="{StaticResource SecondaryBrush}"
+                        Foreground="{StaticResource OtherText}"
                         FontWeight="SemiBold"
                         FontSize="22"
                         VerticalAlignment="Bottom"/>
 
                     <TextBlock
-                        Foreground="{StaticResource SecondaryBrush}"
+                        Foreground="{StaticResource OtherText}"
+                        MouseLeftButtonDown="TextBlock_MouseLeftButtonDown"
                         FontWeight="SemiBold"
                         FontSize="22"
                         Text="SEE MORE"
@@ -534,72 +855,78 @@
                         VerticalAlignment="Center"/>
                 </Grid>
 
-                <StackPanel
+                <ScrollViewer
+                    HorizontalScrollBarVisibility="Visible"
+                    VerticalScrollBarVisibility="Disabled"
+                    
+                    >
+
+                <StackPanel Name="panel"
                     Orientation="Horizontal"
                     Margin="0,10,0,0">
                     <cc:Topics
-                        ImageSource="/assests/bf1.jpg"
-                        Title="COD"
-                        Genre="Action, Shooter"
-                          BitmapEffect="{StaticResource BottomShadowEffect}"
-                        Price="99.9$"
+                        ImageSource="/assests/1.png"
+                        Title="Classification of Ic Engine"
+                        Genre="Simple"
+                    
+                        Price="0$"
                         Margin="0,0,15,0"
                         />
 
                     <cc:Topics
-                        ImageSource="/assests/dh2.jpg"
-                        Title="COD"
-                          BitmapEffect="{StaticResource BottomShadowEffect}"
-                        Genre="Action, Shooter"
+                        ImageSource="/assests/2.png"
+                        Title="Principal Parts of IC Engine"
+                        Genre="Simple"
                         Price="99.9$"
                         Margin="0,0,15,0"
                         />
                     <cc:Topics
-                        ImageSource="/assests/dh2.jpg"
-                        Title="COD"
-                          BitmapEffect="{StaticResource BottomShadowEffect}"
-                        Genre="Action, Shooter"
+                        ImageSource="/assests/3.png"
+                        Title="Parts Functions And Working"
+                        
+                        Genre="Simple"
                         Price="99.9$"
                         Margin="0,0,15,0"
                         />
                     <cc:Topics
-                        ImageSource="/assests/dh2.jpg"
-                        BitmapEffect="{StaticResource BottomShadowEffect}"
-                        Title="COD"
-                        Genre="Action, Shooter"
+                        ImageSource="/assests/4.png"
+                       
+                        Title="Thermal Air Standard Efficiency"
+                        Genre="Simple"
                         Price="99.9$"
                         Margin="0,0,15,0"
                         />
                     <cc:Topics
-                        ImageSource="/assests/bf1.jpg"
-                        Title="COD"
-                        Genre="Action, Shooter"
+                        ImageSource="/assests/5.png"
+                        Title="Thermodynamic Cycles"
+                        Genre="Simple"
                         Price="99.9$"
-                          BitmapEffect="{StaticResource BottomShadowEffect}"
-                        Margin="0,0,15,0"
-                        />
-
-                    <cc:Topics
-                        ImageSource="/assests/bf1.jpg"
-                        Title="COD"
-                        Genre="Action, Shooter"
-                        Price="99.9$"
-                          BitmapEffect="{StaticResource BottomShadowEffect}"
+                        
                         Margin="0,0,15,0"
                         />
 
                     <cc:Topics
                         ImageSource="/assests/bf1.jpg"
                         Title="COD"
-                          BitmapEffect="{StaticResource BottomShadowEffect}"
-                        Genre="Action, Shooter"
+                        Genre="Simple"
+                        Price="99.9$"
+                          
+                        Margin="0,0,15,0"
+                        />
+
+                    <cc:Topics
+                        ImageSource="/assests/bf1.jpg"
+                        Title="COD"
+                       
+                        Genre="Simple"
                         Price="99.9$"
                         Margin="0,0,15,0"
-
-                        />
+/>
 
                 </StackPanel>
-
+                   
+                </ScrollViewer>
+               
             </StackPanel>
 
         </ScrollViewer>

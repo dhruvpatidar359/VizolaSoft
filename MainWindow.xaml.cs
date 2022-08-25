@@ -43,6 +43,7 @@ namespace VizolaSoft
             Close();
         }
 
+       
         private void maximizeButton_Click(object sender, RoutedEventArgs e)
         {
             if (WindowState == WindowState.Normal)
@@ -54,6 +55,26 @@ namespace VizolaSoft
                 WindowState = WindowState.Normal;
             }
             
+        }
+
+        private void TextBlock_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            
+        }
+
+        private void TextBox_MouseEnter(object sender, MouseEventArgs e)
+        {
+            VIZOLA.Foreground = Brushes.Yellow;
+        }
+
+        private void TextBox_MouseLeave(object sender, MouseEventArgs e)
+        {
+            VIZOLA.Foreground = Brushes.White;
+        }
+
+        private void Topics_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

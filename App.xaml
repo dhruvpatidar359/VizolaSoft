@@ -7,26 +7,34 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/assests/icons.xaml"></ResourceDictionary>
-            </ResourceDictionary.MergedDictionaries>
-       
+          
 
-        <SolidColorBrush x:Key="DefaultBackgroundBrush"
+            
+                <ResourceDictionary Source="/assests/Dock Style.xaml"></ResourceDictionary>
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <SolidColorBrush x:Key="DefaultBackgroundBrush"
                          Color="#16181E">
             
         </SolidColorBrush>
         <SolidColorBrush x:Key="CanvasBrush"
-                         Color="#20202C">
+                         Color="#000000">
             
         </SolidColorBrush>
         <SolidColorBrush x:Key="PrimaryBrush"
-                         Color="#00AAEB">
+                         Color="#FFC600">
             
         </SolidColorBrush>
         <SolidColorBrush x:Key="SecondaryBrush"
                          Color="White">
             
         </SolidColorBrush>
-        <SolidColorBrush x:Key="TertiaryBrush"
+            <SolidColorBrush x:Key="OtherText"
+                         Color="#FFC600">
+
+            </SolidColorBrush>
+            <SolidColorBrush x:Key="TertiaryBrush"
                          Color="#E53E46">
             
         </SolidColorBrush>
@@ -72,6 +80,29 @@
 
 
 
+            </Style>
+
+            <Style x:Key="TransparentStyle" TargetType="{x:Type Button}">
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="Button">
+                            <Border>
+                                <Border.Style>
+                                    <Style TargetType="{x:Type Border}">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter Property="Background" Value="DarkGoldenrod"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Border.Style>
+                                <Grid Background="Transparent">
+                                    <ContentPresenter></ContentPresenter>
+                                </Grid>
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
             </Style>
 
             <DropShadowBitmapEffect
