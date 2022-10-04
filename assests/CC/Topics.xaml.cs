@@ -77,8 +77,9 @@ namespace VizolaSoft.assests.CC
 
         private void mouse_leftDown(object sender, MouseButtonEventArgs e)
         {
-             var processInfo = new ProcessStartInfo("C:\\Users\\dhruv\\Desktop\\interactive.exe");
+             var processInfo = new ProcessStartInfo("C:\\Users\\dhruv\\Desktop\\interactive\\interactive.exe");
              Process.Start(processInfo);
+           
 
         }
 

@@ -13,6 +13,7 @@
         AllowsTransparency="True"
         WindowStartupLocation="CenterOwner"
         WindowStyle="None"
+        WindowState="Maximized"
         
         
      FontSize="15"
@@ -129,25 +130,14 @@
                     HorizontalAlignment="Left"
                     Margin="40,0">
 
-                    <RadioButton
-                        Content="Games"
-                        IsChecked="True"
-                        Style="{StaticResource TopNavigationStyle}"/>
+                    <cc:Filtericons
+                            Text="Upcoming"
+                            Margin="20,0,0,0"/>
+                    <cc:Filtericons
+                            Text="Year"
+                            Margin="20,0,0,0"/>
 
-                    <RadioButton
-                        Content="Apps"
-                        IsChecked="True"
-                        Style="{StaticResource TopNavigationStyle}"/>
-
-                    <RadioButton
-                        Content="Movies"
-                        IsChecked="True"
-                        Style="{StaticResource TopNavigationStyle}"/>
-
-                    <RadioButton
-                        Content="Comics"
-                        IsChecked="True"
-                        Style="{StaticResource TopNavigationStyle}"/>
+                   
 
                 </StackPanel>
 
@@ -279,14 +269,14 @@
             </ListBox>-->
             <StackPanel>
             <Button 
-                Margin="0,10,0,10"
+                Margin="0,15,0,15"
                     
                                 x:Name="home"
                                 Style="{StaticResource DockBtnStyle}">
 
                 <Button.Background>
 
-                    <ImageBrush ImageSource="Assests/1.png"
+                    <ImageBrush ImageSource="Assests/home.png"
                                             Stretch="Uniform" />
 
                 </Button.Background>
@@ -314,49 +304,17 @@
 
             </Button>
 
-                <Button  Margin="0,10,0,10"
-                                x:Name="set"
-                                Style="{StaticResource DockBtnStyle}">
-
-                <Button.Background>
-
-                    <ImageBrush ImageSource="Assests/2.png"
-                                            Stretch="Uniform" />
-
-                </Button.Background>
-
-                <Popup Width="70"
-                                   HorizontalOffset="-12"
-                                   PlacementTarget="{Binding ElementName=home}"
-                                   IsOpen="{Binding ElementName=home, Path=IsMouseOver, Mode=OneWay}"
-                                   Style="{StaticResource PopupStyle}">
-
-                    <Grid>
-
-                        <Border Style="{StaticResource border}">
-
-                            <TextBlock Text="Home"
-                                                   Style="{StaticResource PopupText}" />
-
-                        </Border>
-
-                        <Path Style="{StaticResource ArrowPath}" />
-
-                    </Grid>
-
-                </Popup>
-
-            </Button>
+               
 
             <!--// Settings //-->
 
-                <Button  Margin="0,10,0,10"
+                <Button  Margin="0,15,0,15"
                                 x:Name="setting"
                                 Style="{StaticResource DockBtnStyle}">
 
                 <Button.Background>
 
-                    <ImageBrush ImageSource="Assests/3.png"
+                    <ImageBrush ImageSource="Assests/setting.png"
                                             Stretch="Uniform" />
 
                 </Button.Background>
@@ -386,13 +344,13 @@
 
             <!--// Mail //-->
 
-                <Button  Margin="0,10,0,10"
+                <Button  Margin="0,15,0,15"
                                 x:Name="mail"
                                 Style="{StaticResource DockBtnStyle}">
 
                 <Button.Background>
 
-                    <ImageBrush ImageSource="Assests/4.png"
+                    <ImageBrush ImageSource="Assests/info.png"
                                             Stretch="Uniform" />
 
                 </Button.Background>
@@ -422,13 +380,13 @@
 
             <!--// Visual Studio //-->
 
-                <Button  Margin="0,10,0,10"
+                <Button  Margin="0,15,0,15"
                                 x:Name="vs"
                                 Style="{StaticResource DockBtnStyle}">
 
                 <Button.Background>
 
-                    <ImageBrush ImageSource="Assests/5.png"
+                    <ImageBrush ImageSource="Assests/message.png"
                                             Stretch="Uniform" />
 
                 </Button.Background>
@@ -456,118 +414,7 @@
 
             </Button>
 
-            <!--// Chrome //-->
-
-                <Button  Margin="0,10,0,10"
-                                x:Name="chrome"
-                                Style="{StaticResource DockBtnStyle}">
-
-                <Button.Background>
-
-                    <ImageBrush ImageSource="Assests/1.png"
-                                            Stretch="Uniform" />
-
-                </Button.Background>
-
-                <Popup Width="85"
-                                   HorizontalOffset="-19"
-                                   PlacementTarget="{Binding ElementName=chrome}"
-                                   IsOpen="{Binding ElementName=chrome, Path=IsMouseOver, Mode=OneWay}"
-                                   Style="{StaticResource PopupStyle}">
-
-                    <Grid>
-
-                        <Border Style="{StaticResource border}">
-
-                            <TextBlock Text="Chrome"
-                                                   Style="{StaticResource PopupText}" />
-
-                        </Border>
-
-                        <Path Style="{StaticResource ArrowPath}" />
-
-                    </Grid>
-
-                </Popup>
-
-            </Button>
-
-            <!--// YouTube //-->
-
-                <Button Margin="0,10,0,10"
-                                x:Name="youtube"
-                                Style="{StaticResource DockBtnStyle}">
-
-                <Button.Background>
-
-                    <ImageBrush ImageSource="Assests/1.png"
-                                            Stretch="Uniform" />
-
-                </Button.Background>
-
-                <Popup Width="85"
-                                   HorizontalOffset="-18"
-                                   PlacementTarget="{Binding ElementName=youtube}"
-                                   IsOpen="{Binding ElementName=youtube, Path=IsMouseOver, Mode=OneWay}"
-                                   Style="{StaticResource PopupStyle}">
-
-                    <Grid>
-
-                        <Border Style="{StaticResource border}">
-
-                            <TextBlock Text="YouTube"
-                                                   Style="{StaticResource PopupText}" />
-
-                        </Border>
-
-                        <Path Style="{StaticResource ArrowPath}" />
-
-                    </Grid>
-
-                </Popup>
-
-            </Button>
-
-            <!--// Word //-->
-
-                <Button  Margin="0,10,0,10"
-                                x:Name="word"
-                                Style="{StaticResource DockBtnStyle}">
-
-                <Button.Background>
-
-                    <ImageBrush ImageSource="Assests/1.png"
-                                            Stretch="Uniform" />
-
-                </Button.Background>
-
-                <Popup Width="60"
-                                   HorizontalOffset="-8"
-                                   PlacementTarget="{Binding ElementName=word}"
-                                   IsOpen="{Binding ElementName=word, Path=IsMouseOver, Mode=OneWay}"
-                                   Style="{StaticResource PopupStyle}">
-
-                    <Grid>
-
-                        <Border Style="{StaticResource border}">
-
-                            <TextBlock Text="Word"
-                                                   Style="{StaticResource PopupText}" />
-
-                        </Border>
-
-                        <Path Style="{StaticResource ArrowPath}" />
-
-                    </Grid>
-
-                </Popup>
-
-            </Button>
-
-            <!--// Photoshop //-->
-
-          
-            <!--// Downloads //-->
+           
             </StackPanel>
 
         </Grid>
@@ -856,7 +703,7 @@
                 </Grid>
 
                 <ScrollViewer
-                    HorizontalScrollBarVisibility="Visible"
+                    HorizontalScrollBarVisibility="Disabled"
                     VerticalScrollBarVisibility="Disabled"
                     
                     >
@@ -865,63 +712,46 @@
                     Orientation="Horizontal"
                     Margin="0,10,0,0">
                     <cc:Topics
-                        ImageSource="/assests/1.png"
+                        ImageSource="/assests/11.png"
                         Title="Classification of Ic Engine"
-                        Genre="Simple"
-                    
-                        Price="0$"
-                        Margin="0,0,15,0"
+                       Genre="Mechanical Engineering"
+                    MouseLeftButtonDown="Topics_MouseLeftButtonDown"
+                      
+                        Margin="0,0,35,0"
                         />
 
                     <cc:Topics
                         ImageSource="/assests/2.png"
                         Title="Principal Parts of IC Engine"
-                        Genre="Simple"
-                        Price="99.9$"
-                        Margin="0,0,15,0"
+                      Genre="Mechanical Engineering"
+                       
+                  
+                        Margin="0,0,35,0"
+                        />
+                    <cc:Topics
+                        ImageSource="/assests/images.png"
+                        Title="Parts Functions And Working"
+                        
+                     
+                       Genre="Mechanical Engineering"
+                        Margin="0,0,35,0"
                         />
                     <cc:Topics
                         ImageSource="/assests/3.png"
-                        Title="Parts Functions And Working"
-                        
-                        Genre="Simple"
-                        Price="99.9$"
-                        Margin="0,0,15,0"
+                       Genre="Mechanical Engineering"
+                        Title="Thermal Air Standard Efficiency"
+                       
+                        Margin="0,0,35,0"
                         />
                     <cc:Topics
                         ImageSource="/assests/4.png"
-                       
-                        Title="Thermal Air Standard Efficiency"
-                        Genre="Simple"
-                        Price="99.9$"
-                        Margin="0,0,15,0"
-                        />
-                    <cc:Topics
-                        ImageSource="/assests/5.png"
                         Title="Thermodynamic Cycles"
-                        Genre="Simple"
-                        Price="99.9$"
-                        
-                        Margin="0,0,15,0"
+                      
+                        Genre="Mechanical Engineering"
+                        Margin="0,0,35,0"
                         />
 
-                    <cc:Topics
-                        ImageSource="/assests/bf1.jpg"
-                        Title="COD"
-                        Genre="Simple"
-                        Price="99.9$"
-                          
-                        Margin="0,0,15,0"
-                        />
-
-                    <cc:Topics
-                        ImageSource="/assests/bf1.jpg"
-                        Title="COD"
-                       
-                        Genre="Simple"
-                        Price="99.9$"
-                        Margin="0,0,15,0"
-/>
+    
 
                 </StackPanel>
                    

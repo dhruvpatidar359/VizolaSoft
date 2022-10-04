@@ -7,13 +7,13 @@
              mc:Ignorable="d"
              x:Name="Topicss"
              d:DesignHeight="450" d:DesignWidth="800">
-    <Button
+    <Border
         Background="{StaticResource CanvasBrush}"
-        Style="{StaticResource TransparentStyle}"
+        Style="{StaticResource DockBtnStyletwo}"
         Name="Border"
         Height="310"
         BitmapEffect="{StaticResource BottomShadowEffect}"
-        Width="195" MouseLeftButtonDown="mouse_leftDown">
+        Width="195" >
         
         
         
@@ -49,20 +49,10 @@
                     FontSize="12"
                     ></TextBlock>
 
-                <Grid
-                    Margin="0,12,0,0">
-                      <TextBlock
-                    Foreground="{StaticResource SecondaryBrush}"
-                    Text="{Binding Price,ElementName=Topicss,FallbackValue=Price,TargetNullValue=Price}"
-                   TextTrimming="CharacterEllipsis"
-                    FontWeight="SemiBold"
-                          FontSize="12">
-                    </TextBlock>
-                </Grid>
-
+              
 
             </StackPanel>
         </Grid>
         
-    </Button>
+    </Border>
 </UserControl>

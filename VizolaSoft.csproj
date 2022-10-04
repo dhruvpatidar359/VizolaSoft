@@ -86,6 +86,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="assests\Dock Styletwo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="assests\icons.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -169,13 +173,21 @@
     <Resource Include="assests\ultrahands.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assests\1.png" />
+    <Resource Include="assests\11.png" />
     <Resource Include="assests\2.png" />
     <Resource Include="assests\3.png" />
     <Resource Include="assests\4.png" />
     <Resource Include="assests\5.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="assests\home.png" />
+    <Resource Include="assests\setting.png" />
+    <Resource Include="assests\info.png" />
+    <Resource Include="assests\message.png" />
+    <Resource Include="assests\car-engine.png" />
+    <Resource Include="assests\1.png" />
+    <Resource Include="assests\images.png" />
+    <SplashScreen Include="assests\splash-screen.png" />
     <Content Include="assests\vizolaicon.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

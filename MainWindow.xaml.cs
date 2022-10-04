@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,7 @@ namespace VizolaSoft
     {
         public MainWindow()
         {
+            System.Threading.Thread.Sleep(1500);
             InitializeComponent();
         }
 
@@ -75,6 +77,19 @@ namespace VizolaSoft
         private void Topics_Loaded(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void mouse_leftDown(object sender, MouseButtonEventArgs e)
+        {
+            var processInfo = new ProcessStartInfo("C:\\Users\\dhruv\\Desktop\\interactive\\interactive.exe");
+            Process.Start(processInfo);
+
+
+        }
+
+        private void Topics_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var processInfo = new ProcessStartInfo("C:\\Users\\dhruv\\Desktop\\prototype\\prototype.exe");
+            Process.Start(processInfo);
         }
     }
 }
